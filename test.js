@@ -30,12 +30,12 @@ const expected = 167.455 * 3.5;
 expect(fromDollarToYen(3.5)).toBe(586.0925); // 1 euro is 156.5 yens, so 156.5 yens should be = (156.5 * 1.07)
 });
 
-test("One yen should be 0.0055591054313099 pounds", function() {
+test("One yen should be 1/156.5 * 0.87 pounds", function() {
     const { fromYenToPound } = require('./app.js');
 
     const pounds =  fromYenToPound(300);
 
-    const expected = 0.0055591054313099 * 300;
+    const expected = 1/156.5 * 0.87 * 300;
 
-    expect(fromYenToPound(300)).toBe(1.667731629392971); //1 euro is 156.5 yens and 0.87 pounds, so 1 pound shoul be (1/156 * 0.87)
+    expect(fromYenToPound(300)).toBe(1.673076923076923); //1 euro is 156.5 yens and 0.87 pounds, so 1 pound shoul be (1/156 * 0.87)
 });
